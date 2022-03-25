@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { rental } from "./rental";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {rental.map((rental) => (
+        <Hai
+          name={rental.name}
+          image={rental.image}
+          price={rental.price}
+          timing={rental.timing}
+        />
+      ))}
     </div>
   );
 }
 
-export default App;
+function Hai({ name, image, price, timing }) {
+  return (
+    <div className="new">
+      <img src={image} alt="not supported" />
+      <h1> {name}</h1>
+      <p>{price}</p>
+      <p>{timing}</p>
+    </div>
+  );
+}
