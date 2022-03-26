@@ -7,9 +7,8 @@ import { Switch, Route } from "react-router-dom";
 import Button from "@mui/material/Button";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import TextField from "@mui/material/TextField";
-import DateMomentUtils from "@date-io/moment";
-import { DateTimePicker, MuiPickersUtilsProvider } from "@material-ui/pickers";
-import React, { useState } from "react";
+import React from "react";
+import { Calendar } from "./Calendar";
 
 export default function App() {
   return (
@@ -102,13 +101,4 @@ function Loginform() {
   );
 }
 
-function Calendar() {
-  const [currentDate, setCurrentData] = useState(new Date());
-  return (
-    <div className="datetime">
-      <MuiPickersUtilsProvider utils={DateMomentUtils}>
-        <DateTimePicker value={currentDate} onChange={setCurrentData} />
-      </MuiPickersUtilsProvider>
-    </div>
-  );
-}
+

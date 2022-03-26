@@ -3,7 +3,7 @@ import CardActions from "@mui/material/CardActions";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import * as React from "react";
 import Button from "@mui/material/Button";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { useHistory } from "react-router-dom";
 
 export function Rental({ name, image, price, timing }) {
   const history = useHistory();
