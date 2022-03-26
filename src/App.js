@@ -9,7 +9,7 @@ import TextField from "@mui/material/TextField";
 import React from "react";
 import { Rental } from "./Rental.1";
 import { Calendar } from "./Calendar";
-import { Notfound } from "./Notfound";
+// import { Notfound } from "./Notfound";
 
 export default function App() {
   return (
