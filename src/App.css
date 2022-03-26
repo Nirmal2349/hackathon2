@@ -47,3 +47,10 @@ form {
  font-size: 48px;
  margin: 0; 
 }
+.datetime{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+

@@ -7,13 +7,22 @@ export function Calendar() {
   return (
     <div className="datetime">
       <div>
-        From-Date
+        <h3>
+          From-Date
+          <br />
+          <br />
+        </h3>
         <MuiPickersUtilsProvider utils={DateMomentUtils}>
           <DateTimePicker value={currentDate} onChange={setCurrentData} />
         </MuiPickersUtilsProvider>
       </div>
       <div>
-        TO-Date
+        <h3>
+          TO-Date
+          <br />
+          <br />
+        </h3>
+
         <MuiPickersUtilsProvider utils={DateMomentUtils}>
           <DateTimePicker value={currentDate} onChange={setCurrentData} />
         </MuiPickersUtilsProvider>
