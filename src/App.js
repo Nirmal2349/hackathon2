@@ -4,15 +4,20 @@ import { data } from "./Data";
 import { useFormik } from "formik";
 import * as yup from "yup";
 import { Switch, Route } from "react-router-dom";
-import * as React from "react";
 import Button from "@mui/material/Button";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import TextField from "@mui/material/TextField";
+import DateMomentUtils from "@date-io/moment";
+import { DateTimePicker, MuiPickersUtilsProvider } from "@material-ui/pickers";
+import React, { useState } from "react";
 
 export default function App() {
   return (
     <div className="App">
       <Switch>
+        <Route path="/rental/order">
+          <Calendar />
+        </Route>
         <Route path="/rental">
           <div className="rental-card">
             {data.map((data) => (
@@ -88,11 +93,22 @@ function Loginform() {
 
       <Button
         variant="contained"
-        onClick={() => history.push(`/rental`)}
+        onClick={() => history.goForward(`/rental`)}
         aria-label="toggle descreption"
       >
         Login
       </Button>
     </form>
+  );
+}
+
+function Calendar() {
+  const [currentDate, setCurrentData] = useState(new Date());
+  return (
+    <div className="datetime">
+      <MuiPickersUtilsProvider utils={DateMomentUtils}>
+        <DateTimePicker value={currentDate} onChange={setCurrentData} />
+      </MuiPickersUtilsProvider>
+    </div>
   );
 }
