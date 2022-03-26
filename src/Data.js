@@ -1,14 +1,15 @@
-export const rental = [
+export const data = [
   {
     name: "Cannon Camera",
-    image: "https://cdn.mos.cms.futurecdn.net/2amTeNbLHjD8kMj7f96MfZ.jpg",
+    image:
+      "https://i.pinimg.com/originals/e7/ff/65/e7ff654cee54c6f1fe58279cb56c40ab.jpg",
     price: "₹1499",
     timing: "3Hours",
   },
   {
     name: "DJ Drone",
     image:
-      "https://cdn.thewirecutter.com/wp-content/media/2021/07/drones-2048px-2x1-9431.jpg?auto=webp&quality=75&crop=2:1&width=1024",
+      "https://images.unsplash.com/photo-1553165558-424ffa9c4303?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
     price: "₹2999",
     timing: "1Hours",
   },

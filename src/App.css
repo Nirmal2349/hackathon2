@@ -1,38 +1,43 @@
-.App {
-  text-align: center;
+.image {
+  width: 340px;
+  height: 340px;
+  margin: 0px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.specs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.name {
+  margin: 0px;
+}
+.rental-card {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.price {
+  font-size: 15px;
+}
+.button {
+  margin-right: 10px;
+}
+.new-container {
+  box-shadow: 10px 10px 5px lightslategray;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.new-container:hover {
+  transform: scale(1.1);
+}
+
+form {
   display: flex;
   flex-direction: column;
+  margin-top: 200px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
