@@ -6,9 +6,18 @@ export function Calendar() {
   const [currentDate, setCurrentData] = useState(new Date());
   return (
     <div className="datetime">
-      <MuiPickersUtilsProvider utils={DateMomentUtils}>
-        <DateTimePicker value={currentDate} onChange={setCurrentData} />
-      </MuiPickersUtilsProvider>
+      <div>
+        From-Date
+        <MuiPickersUtilsProvider utils={DateMomentUtils}>
+          <DateTimePicker value={currentDate} onChange={setCurrentData} />
+        </MuiPickersUtilsProvider>
+      </div>
+      <div>
+        TO-Date
+        <MuiPickersUtilsProvider utils={DateMomentUtils}>
+          <DateTimePicker value={currentDate} onChange={setCurrentData} />
+        </MuiPickersUtilsProvider>
+      </div>
     </div>
   );
 }

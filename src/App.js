@@ -3,12 +3,13 @@ import { Rental } from "./Rental.1";
 import { data } from "./Data";
 import { useFormik } from "formik";
 import * as yup from "yup";
-import { Switch, Route } from "react-router-dom";
+import { BrowserRouter,Switch, Route } from "react-router-dom";
 import Button from "@mui/material/Button";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import TextField from "@mui/material/TextField";
 import React from "react";
 import { Calendar } from "./Calendar";
+import { Notfound } from "./Notfound";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
         <Route path="/rental/order">
           <Calendar />
         </Route>
+
         <Route path="/rental">
           <div className="rental-card">
             {data.map((data) => (
@@ -29,8 +31,13 @@ export default function App() {
             ))}
           </div>
         </Route>
+
         <Route path="/">
           <Loginform />
+        </Route>
+
+        <Route path="**">
+          <Notfound />
         </Route>
       </Switch>
     </div>
@@ -100,5 +107,4 @@ function Loginform() {
     </form>
   );
 }
-
 

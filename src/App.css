@@ -41,3 +41,9 @@ form {
   margin-top: 200px;
   align-items: center;
 }
+
+.not-found{
+ text-align: center;
+ font-size: 48px;
+ margin: 0; 
+}
